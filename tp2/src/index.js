@@ -5,4 +5,5 @@ import './config/statusBarConfig';
 
 const App = () =><Routes/>;
 export default App;
+
 registerRootComponent(App);
