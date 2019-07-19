@@ -6,8 +6,12 @@ import api from '../services/api';
 
 export default class Main extends Component {
     static navigationOptions = {
-        title: 'Olokinho Meu.js',
+        
+        title: 'Olokinhooooo meu !!!',
+        headerTitleStyle: { flex: 1, textAlign: 'center'} 
+
     };
+
     constructor(props){
         super(props);
         this.state = ({
@@ -39,7 +43,9 @@ export default class Main extends Component {
         <View style={styles.productContainer}>
             <Text style={styles.productTitle}>{item.title}</Text>
             <Text style={styles.productDescription}>{item.description}</Text>
-            <TouchableOpacity style={styles.productButton} onPress={()=>{}}><Text style={styles.productButtonText}>Acessar</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.productButton} onPress={()=>{
+                this.props.navigation.navigate('Product',{product: item})
+            }}><Text style={styles.productButtonText}>Acessar</Text></TouchableOpacity>
         </View>
     )
     loadMore = () =>{
@@ -93,7 +99,7 @@ styles = StyleSheet.create({
         height: 42,
         borderRadius: 5,
         borderWidth: 2,
-        borderColor: '#da552f',
+        borderColor: '#00FF7F',
         backgroundColor: 'transparent',
         justifyContent: 'center',
         alignItems: 'center',
@@ -101,7 +107,7 @@ styles = StyleSheet.create({
     },
     productButtonText: {
         fontSize: 16,
-        color: '#da552f',
+        color: '#00FF7F',
         fontWeight: 'bold'
     }
 
