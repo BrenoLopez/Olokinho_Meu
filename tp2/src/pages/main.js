@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import api from '../services/api';
-// import Axios from 'axios';
+
 
 
 export default class Main extends Component {
